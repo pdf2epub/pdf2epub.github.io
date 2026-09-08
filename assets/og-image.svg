@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0" y1="0" x2="600" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="accentGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="200" cy="150" r="300" fill="url(#accentGlow)"/>
+  <circle cx="1000" cy="450" r="350" fill="url(#accentGlow)"/>
+
+  <!-- Brand badge -->
+  <rect x="80" y="80" width="220" height="42" rx="21" fill="#1e293b" stroke="#334155"/>
+  <circle cx="102" cy="101" r="7" fill="#10b981"/>
+  <text x="120" y="107" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="600" letter-spacing="1">100% PRIVATE &amp; FAST</text>
+
+  <!-- Title -->
+  <text x="80" y="210" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="64" font-weight="800">Convert PDF to EPUB</text>
+  <text x="80" y="280" fill="url(#textGrad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="64" font-weight="800">For Kindle, Kobo &amp; Apple Books</text>
+
+  <!-- Subtitle -->
+  <text x="80" y="350" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="400">Zero Server Uploads • In-Browser Reflowable EPUB3 • Smart Chapter Detection</text>
+
+  <!-- Feature Pills -->
+  <g transform="translate(80, 420)">
+    <rect x="0" y="0" width="240" height="60" rx="12" fill="#1e293b" stroke="#334155"/>
+    <text x="30" y="37" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="600">⚡ Instant Conversion</text>
+
+    <rect x="260" y="0" width="250" height="60" rx="12" fill="#1e293b" stroke="#334155"/>
+    <text x="290" y="37" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="600">🔒 100% Client-Side</text>
+
+    <rect x="530" y="0" width="250" height="60" rx="12" fill="#1e293b" stroke="#334155"/>
+    <text x="560" y="37" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="600">📖 Live EPUB Preview</text>
+
+    <rect x="800" y="0" width="230" height="60" rx="12" fill="#1e293b" stroke="#334155"/>
+    <text x="830" y="37" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="600">📦 Batch Processing</text>
+  </g>
+
+  <!-- Comparison pill -->
+  <g transform="translate(80, 525)">
+    <text x="0" y="24" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="500">Outperforming CloudConvert, Zamzar &amp; Online2PDF with Zero Queues and No File Size Limits.</text>
+  </g>
+</svg>

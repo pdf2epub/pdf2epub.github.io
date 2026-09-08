@@ -1,0 +1,69 @@
+/**
+ * PDF to EPUB Pro - Cookie Banner & Consent Handler
+ * GDPR & CCPA compliant client-side consent management
+ */
+
+(function () {
+  function initCookieConsent() {
+    const consent = localStorage.getItem('p2e_cookie_consent');
+    const banner = document.getElementById('cookieBanner');
+    if (!banner) return;
+
+    if (consent) {
+      banner.classList.add('hidden');
+      return;
+    }
+
+    banner.classList.remove('hidden');
+
+    const acceptBtn = document.getElementById('acceptCookiesBtn');
+    const declineBtn = document.getElementById('declineCookiesBtn');
+
+    if (acceptBtn) {
+      acceptBtn.addEventListener('click', function () {
+        localStorage.setItem('p2e_cookie_consent', 'accepted');
+        banner.classList.add('hidden');
+      });
+    }
+
+    if (declineBtn) {
+      declineBtn.addEventListener('click', function () {
+        localStorage.setItem('p2e_cookie_consent', 'essential_only');
+        banner.classList.add('hidden');
+      });
+    }
+  }
+
+  // Theme support across all pages
+  function initThemeGlobal() {
+    const savedTheme = localStorage.getItem('p2e_theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    const themeBtn = document.getElementById('themeToggleBtn');
+    if (themeBtn) {
+      updateThemeIcon(themeBtn, savedTheme);
+      themeBtn.addEventListener('click', function () {
+        const current = document.documentElement.getAttribute('data-theme') || 'dark';
+        const next = current === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('p2e_theme', next);
+        updateThemeIcon(themeBtn, next);
+      });
+    }
+  }
+
+  function updateThemeIcon(btn, theme) {
+    btn.innerHTML = theme === 'dark'
+      ? `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>`
+      : `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () {
+      initThemeGlobal();
+      initCookieConsent();
+    });
+  } else {
+    initThemeGlobal();
+    initCookieConsent();
+  }
+})();

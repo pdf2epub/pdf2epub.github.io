@@ -1,0 +1,6 @@
+# robots.txt for PDF to EPUB Pro
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://yourusername.github.io/pdf-to-epub/sitemap.xml

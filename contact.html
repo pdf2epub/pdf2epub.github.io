@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Contact Us - PDF to EPUB Pro | Support &amp; Feedback</title>
+  <meta name="title" content="Contact Us - PDF to EPUB Pro | Support &amp; Feedback">
+  <meta name="description" content="Have questions, feature requests, or bug reports for PDF to EPUB Pro? Get in touch with our engineering and developer support team.">
+  <link rel="canonical" href="/contact.html">
+  <meta name="robots" content="index, follow">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="ambient-glow"></div>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="brand-logo" aria-label="PDF to EPUB Pro Homepage">
+        <img src="assets/favicon.svg" alt="PDF to EPUB Pro Icon" class="brand-icon" width="38" height="38">
+        <span>PDF<span class="gradient-text">2</span>EPUB</span>
+        <span class="free-unlimited-pill">FREE &amp; UNLIMITED</span>
+      </a>
+
+      <nav class="site-navigation" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="/" class="nav-link">Converter</a></li>
+          <li><a href="/#comparison" class="nav-link">Comparison</a></li>
+          <li><a href="/#how-it-works" class="nav-link">How It Works</a></li>
+          <li><a href="/#ereader-guide" class="nav-link">Kindle &amp; Kobo</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link active" style="color:var(--text-primary); font-weight:600;">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="themeToggleBtn" class="theme-toggle-btn" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section class="content-hero">
+      <span class="content-hero-badge">We Are Here to Help</span>
+      <h1 class="content-hero-title">Contact <span class="gradient-text">Our Team</span></h1>
+      <p class="content-hero-subtitle">
+        Have questions, suggestions, or need assistance with complex document conversions? We'd love to hear from you.
+      </p>
+    </section>
+
+    <div class="content-container">
+      <article class="content-card">
+        <h2>Send Us a Message</h2>
+        <p>
+          Fill out the form below and our engineering team will respond promptly. For instant answers regarding formats, Kindle setup, or privacy, check out our <a href="/#faq" style="color:var(--accent-cyan)">Frequently Asked Questions</a>.
+        </p>
+
+        <form id="contactForm" onsubmit="event.preventDefault(); handleContactSubmit();" style="margin-top: 24px;">
+          <div class="contact-grid">
+            <div class="form-group">
+              <label class="form-label" for="contactName">Your Name</label>
+              <input type="text" class="form-input" id="contactName" placeholder="e.g. Alex Morgan" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contactEmail">Your Email</label>
+              <input type="email" class="form-input" id="contactEmail" placeholder="e.g. alex@example.com" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="contactCategory">Subject Category</label>
+            <select class="form-select" id="contactCategory" required>
+              <option value="feedback" selected>General Feedback &amp; Ideas</option>
+              <option value="bug">Report a Bug / Layout Issue</option>
+              <option value="feature">Feature Request (e.g. OCR / Format support)</option>
+              <option value="partnership">Open Source / Collaboration</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="contactMessage">Your Message</label>
+            <textarea class="contact-textarea" id="contactMessage" placeholder="Describe your question or feedback in detail..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary" id="btnSubmitContact">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            <span>Send Message</span>
+          </button>
+        </form>
+
+        <div id="contactSuccessNotice" style="display:none; margin-top:24px;" class="highlight-box">
+          <p>
+            ✅ <strong>Thank you!</strong> Your message has been sent to our team. We typically respond within 24 to 48 hours.
+          </p>
+        </div>
+
+        <h2>Other Ways to Connect</h2>
+        <p>
+          You can also get involved with our open-source community:
+        </p>
+        <ul>
+          <li><strong>GitHub Issues:</strong> Submit bug reports or inspect the source code on GitHub.</li>
+          <li><strong>Feature Requests:</strong> Suggest improvements for e-reader layout heuristics.</li>
+          <li><strong>Privacy Audits:</strong> Review our client-side JavaScript architecture directly in your browser's Developer Tools.</li>
+        </ul>
+      </article>
+    </div>
+  </main>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Cookie Banner -->
+  <div class="cookie-banner hidden" id="cookieBanner" role="region" aria-label="Cookie consent banner">
+    <div class="cookie-header">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 0-2 19.8"/><circle cx="8" cy="9" r="1"/><circle cx="15" cy="8" r="1"/><circle cx="10" cy="14" r="1"/><circle cx="16" cy="14" r="1"/></svg>
+      <span>Cookie &amp; Privacy Notice</span>
+    </div>
+    <div class="cookie-text">
+      We value your privacy. We do not use third-party tracking cookies or sell data. We only use local browser storage to save your dark/light theme and conversion preferences. Learn more in our <a href="cookies.html">Cookie Policy</a> and <a href="privacy.html">Privacy Policy</a>.
+    </div>
+    <div class="cookie-actions">
+      <button type="button" class="btn-cookie-accept" id="acceptCookiesBtn">Accept All</button>
+      <button type="button" class="btn-cookie-decline" id="declineCookiesBtn">Essential Only</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 14px;">
+            <img src="assets/favicon.svg" alt="PDF to EPUB Pro" class="brand-icon" width="32" height="32">
+            <span>PDF<span class="gradient-text">2</span>EPUB PRO</span>
+          </div>
+          <p style="font-size: 0.9rem; line-height: 1.6; max-width: 320px;">
+            The world's fastest, 100% free &amp; unlimited in-browser PDF to EPUB converter. Zero server uploads, no file size limits, 100% private.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Quick Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="/">Free PDF Converter</a></li>
+            <li><a href="/#comparison">Competitor Comparison</a></li>
+            <li><a href="/#how-it-works">How It Works</a></li>
+            <li><a href="/#ereader-guide">Kindle Transfer Guide</a></li>
+            <li><a href="/#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Compatible Readers</h5>
+          <ul class="footer-links">
+            <li><a href="/#ereader-guide">Amazon Kindle</a></li>
+            <li><a href="/#ereader-guide">Kobo Clara &amp; Libra</a></li>
+            <li><a href="/#ereader-guide">Apple Books (iPhone / Mac)</a></li>
+            <li><a href="/#ereader-guide">Google Play Books</a></li>
+            <li><a href="/#ereader-guide">Calibre E-Book Reader</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Company &amp; Legal</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="cookies.html">Cookie Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 PDF2EPUB Pro. 100% Free &amp; Unlimited. Released under the MIT License.
+        </div>
+        <div>
+          <a href="/" style="color:var(--text-secondary); text-decoration:none;">Home</a> • 
+          <a href="about.html" style="color:var(--text-secondary); text-decoration:none;">About</a> • 
+          <a href="privacy.html" style="color:var(--text-secondary); text-decoration:none;">Privacy</a> • 
+          <a href="cookies.html" style="color:var(--text-secondary); text-decoration:none;">Cookies</a> • 
+          <a href="terms.html" style="color:var(--text-secondary); text-decoration:none;">Terms</a> • 
+          <a href="disclaimer.html" style="color:var(--text-secondary); text-decoration:none;">Disclaimer</a> • 
+          <a href="contact.html" style="color:var(--text-secondary); text-decoration:none;">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/cookie-consent.js"></script>
+  <script>
+    function handleContactSubmit() {
+      const name = document.getElementById('contactName').value;
+      const email = document.getElementById('contactEmail').value;
+      const message = document.getElementById('contactMessage').value;
+
+      if (!name || !email || !message) return;
+
+      document.getElementById('contactForm').reset();
+      document.getElementById('contactSuccessNotice').style.display = 'block';
+
+      // Show toast
+      const toast = document.createElement('div');
+      toast.className = 'toast toast-success';
+      toast.innerHTML = '<span>✓</span><span>Your message has been sent successfully!</span>';
+      document.getElementById('toastContainer').appendChild(toast);
+
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateX(100%)';
+        setTimeout(() => toast.remove(), 300);
+      }, 3500);
+    }
+  </script>
+</body>
+</html>
