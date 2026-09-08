@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://yourusername.github.io/pdf-to-epub/sitemap.xml
+Sitemap: https://pdf2epub.github.io/sitemap.xml
