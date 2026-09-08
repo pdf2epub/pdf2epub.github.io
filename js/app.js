@@ -60,10 +60,6 @@ class PDFToEPUBApp {
     this.optCustomTitle = document.getElementById('optCustomTitle');
     this.optCustomAuthor = document.getElementById('optCustomAuthor');
     this.optCoverExtract = document.getElementById('optCoverExtract');
-
-    // Theme Toggle
-    this.themeToggleBtn = document.getElementById('themeToggleBtn');
-
     // FAQ items
     this.faqItems = document.querySelectorAll('.faq-item');
 
@@ -170,12 +166,6 @@ class PDFToEPUBApp {
     });
   }
 
-  /* Theme handling delegated to global cookie-consent.js */
-  toggleTheme() {
-    if (window.toggleAppTheme) {
-      window.toggleAppTheme();
-    }
-  }
 
   /* Files and Queue */
   handleFiles(files) {
